@@ -4,7 +4,8 @@
   "description": "Send emails built from handlebars templates",
   "main": "lib/index.js",
   "scripts": {
-    "patch": "npm version patch"
+    "tags": "git push --follow-tags",
+    "patch": "npm version patch && npm run tags"
   },
   "keywords": [
     "email",
