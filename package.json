@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "Send emails built from handlebars templates",
   "main": "lib/index.js",
-  "scripts": {},
+  "scripts": {
+    "patch": "npm version patch"
+  },
   "keywords": [
     "email",
     "html",
