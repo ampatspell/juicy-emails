@@ -11,14 +11,15 @@ Send emails built from Handlebars templates.
 ``` javascript
 const Email = require('juicy-emails');
 const mailgun = require('nodemailer-mailgun-transport');
-
 const path = require('path');
+
 const templates = path.join(__dirname, 'templates');
+const helpers = require('./helpers');
 
 const email = new Email({
   handlebars: {
-    templates,
-    helpers: require('./helpers')
+    templates, // required
+    helpers    // optional
   },
   juice: {
     preserveImportant: true,
@@ -28,8 +29,8 @@ const email = new Email({
     }
   },
   mailer: {
-    send: false, // sets transport to jsonTransport
-    from: 'Zeeba <zeeba@gmail.com>', // default from
+    send: false, // sets transport to jsonTransport, defaults to true
+    from: 'Zeeba <zeeba@gmail.com>', // default from, optional
     transport: mailgun({ // defaults to { jsonTransport: true }
       auth: {
         api_key: '...',
