@@ -12,7 +12,7 @@
     "juice"
   ],
   "author": "Arnis Vuskans <ampatspell@gmail.com> (http://www.amateurinmotion.com/)",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "glob": "^7.1.4",
     "handlebars": "^4.1.2",
