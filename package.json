@@ -1,0 +1,23 @@
+{
+  "name": "juicy-emails",
+  "version": "0.0.1",
+  "description": "Send emails built from handlebars templates",
+  "main": "lib/index.js",
+  "scripts": {},
+  "keywords": [
+    "email",
+    "html",
+    "templates",
+    "handlebars",
+    "juice"
+  ],
+  "author": "Arnis Vuskans <ampatspell@gmail.com> (http://www.amateurinmotion.com/)",
+  "license": "ISC",
+  "dependencies": {
+    "glob": "^7.1.4",
+    "handlebars": "^4.1.2",
+    "html-to-text": "^5.1.1",
+    "juice": "^5.2.0",
+    "nodemailer": "^6.2.1"
+  }
+}
