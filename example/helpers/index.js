@@ -1,3 +1,6 @@
 module.exports = (handlebars, service) => {
-  return {}
+  let helper = name => require(`./${name}`)(handlebars, service);
+  return {
+    t: helper('t')
+  };
 }
