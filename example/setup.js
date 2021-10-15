@@ -16,13 +16,14 @@ let email = new Email({
     }
   },
   mailer: {
-    send: false,
+    send: true,
     from: 'ampatspell@gmail.com',
     transport: mailgun({
       auth: {
-        api_key: '...',
-        domain: '...'
-      }
+        api_key: '…',
+        domain: '…'
+      },
+      host: 'api.eu.mailgun.net'
     })
   }
 });

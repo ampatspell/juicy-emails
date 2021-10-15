@@ -13,7 +13,7 @@ invoke(async email => {
   };
 
   let sent = await email.send({
-    to: 'zeeba@gmail.com',
+    to: 'ampatspell@gmail.com',
     name: 'async',
     props: {
       intl,
