@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "nodemailer-mailgun-transport": "^2.0.3"
+    "nodemailer-mailgun-transport": "^2.1.3"
   }
 }
