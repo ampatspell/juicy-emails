@@ -1,13 +1,15 @@
-const Email = require('../lib');
-const path = require('path');
-const mailgun = require('nodemailer-mailgun-transport');
+import Email from '../lib/index.js';
+import path from 'path';
+import mailgun from 'nodemailer-mailgun-transport';
+import helpers from './helpers/index.js';
 
-let root = path.join(__dirname, 'templates');
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
+const root = path.join(__dirname, 'templates');
 
-let email = new Email({
+export const email = new Email({
   handlebars: {
     templates: root,
-    helpers: require('./helpers')
+    helpers
   },
   juice: {
     preserveImportant: true,
@@ -27,13 +29,3 @@ let email = new Email({
     })
   }
 });
-
-module.exports = fn => {
-  fn(email).then(res => {
-    if(res) {
-      console.log(res);
-    }
-  }, err => {
-    console.error(err);
-  });
-}

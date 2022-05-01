@@ -1,14 +1,14 @@
-let invoke = require('./setup');
+import { email } from './setup.js';
 
-invoke(async email => {
-
+try {
   let sent = await email.send({
-    to: 'zeeba@gmail.com',
+    to: 'ampatspell@gmail.com',
     name: 'hello',
     props: {
       name: 'Zeeba'
     }
   });
-
   console.log(sent);
-});
+} catch(err) {
+  console.log(err);
+}

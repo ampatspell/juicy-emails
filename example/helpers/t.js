@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 
   return (key, props) => {
     let { hash, data: { root: { multipass, intl } } } = props;
