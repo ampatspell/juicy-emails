@@ -1,7 +1,5 @@
 import t from './t.js';
 
-export default (handlebars, service) => {
-  return {
-    t: t(handlebars, service)
-  }
-}
+export default (handlebars, service) => ({
+  t: t(handlebars, service)
+});

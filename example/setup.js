@@ -18,7 +18,7 @@ export const email = new Email({
     }
   },
   mailer: {
-    send: true,
+    send: false,
     from: 'ampatspell@gmail.com',
     transport: mailgun({
       auth: {
