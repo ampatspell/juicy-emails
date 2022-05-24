@@ -9,14 +9,14 @@ Send emails built from Handlebars templates.
 * sends email using [nodemailer](https://github.com/nodemailer/nodemailer)
 
 ``` javascript
-const Email = require('juicy-emails');
-const mailgun = require('nodemailer-mailgun-transport');
-const path = require('path');
+import JuicyEmails from 'juicy-emails';
+import mailgun from 'nodemailer-mailgun-transport';
+import path from 'path';
 
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
 const templates = path.join(__dirname, 'templates');
-const helpers = require('./helpers');
 
-const email = new Email({
+const email = new JuicyEmails({
   handlebars: {
     templates, // required
     helpers    // optional
