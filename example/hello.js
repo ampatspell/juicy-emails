@@ -8,4 +8,4 @@ let sent = await email.send({
   }
 });
 
-console.log(sent);
+console.log(sent.source.html);
