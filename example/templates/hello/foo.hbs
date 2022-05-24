@@ -1,0 +1,13 @@
+<div class="foo">
+  <div class="row">Hello {{name}}!</div>
+  {{#if (has-block)}}
+    <div class="row">
+      {{yield (hash
+        name=(concat 'The' name)
+        description=(concat name "from" address.street separator=" ")
+      )}}
+    </div>
+  {{else}}
+    <div class="row">No block</div>
+  {{/if}}
+</div>

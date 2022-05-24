@@ -1,5 +1,14 @@
 {{#> body}}
 
-  Hey, {{name}}.
+  {{#component 'hello/foo' name=name address=(hash street="Zeeba str") as |cmp|}}
+    <div class="row">{{cmp.name}}</div>
+    <div class="row">Hey {{cmp.description}}!</div>
+  {{/component}}
+
+  {{component 'hello/foo' name=name address=(hash street="Zeeba str")}}
+
+  {{#component 'hello/bar'}}
+    Bar
+  {{/component}}
 
 {{/body}}

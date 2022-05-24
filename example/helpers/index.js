@@ -1,6 +1,5 @@
-module.exports = (handlebars, service) => {
-  let helper = name => require(`./${name}`)(handlebars, service);
-  return {
-    t: helper('t')
-  };
-}
+import t from './t.js';
+
+export default (handlebars, service) => ({
+  t: t(handlebars, service)
+});
