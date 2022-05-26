@@ -1,6 +1,6 @@
 {
   "name": "juicy-emails",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Send emails built from handlebars templates",
   "type": "module",
   "exports": "./lib/index.js",
